@@ -1,0 +1,29 @@
+.go-next {
+    width: 10em;
+    padding: 0.5em 0.5em;
+    margin: 1em 1em;
+    align-self: center;
+    background: none;
+    font-size: large;
+    border-radius: 1em;
+    transition: all 0.3s;
+    user-select: none;
+    outline: none;
+}
+
+.go-next.disabled {
+    border: 2px solid #aaaaaa;
+    background: #aaaaaa;
+    color: white;
+    cursor: default;
+}
+
+.go-next.active {
+    border: 2px solid #B71C1C;
+    color: #B71C1C;
+}
+
+.go-next.active:hover {
+    background: #B71C1C;
+    color: white;
+}

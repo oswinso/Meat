@@ -1,0 +1,37 @@
+.PlaceholderCalendarDay {
+    cursor: default;
+    padding: 10px 10px;
+    margin: 20px 20px;
+    width: 20px;
+    text-align: center;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.CalendarDay {
+    cursor: pointer;
+    padding: 10px 10px;
+    margin: 20px 20px;
+    width: 20px;
+    text-align: center;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.CalendarDay.enabled-day:hover {
+    background: #eeeeee;
+}
+
+.CalendarDay.Clicked {
+    background: #fea090;
+}
+
+.CalendarDay.Clicked:hover {
+    background: #fa9080;
+}
+
+.disabled-day {
+    cursor: default;
+    background: #aaaaaa;
+    color: #eeeeee;
+}

@@ -1,0 +1,87 @@
+.monthHeader {
+    width: 100%;
+    grid-area: month;
+    margin: 10px 10px 0;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em 0;
+}
+
+.yearHeader {
+    width: 100%;
+    grid-area: year;
+    color: #555555;
+    text-align: center;
+    font-size: 1em;
+    padding: 1em 0;
+    align-self: end;
+}
+
+.calendar-daysofweek {
+    grid-area: dow;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    text-align: center;
+}
+
+hr.divider {
+    height: 1px;
+    width: 100%;
+    grid-area: line;
+    background-color: #e0e0e0;
+    border: none;
+}
+
+.calendar-body {
+    grid-area: days;
+    width: 100%;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.prevMonth {
+    grid-area: prev;
+    justify-self: start;
+    align-self: center;
+}
+
+.nextMonth {
+    grid-area: next;
+    justify-self: end;
+    align-self: center;
+}
+
+.arrow {
+    font-size: 4em;
+    cursor: pointer;
+    color: #555555;
+    opacity: 0.1;
+    transition: opacity 0.3s, color 0.3s;
+}
+
+.arrow:hover {
+    opacity: 1.0;
+    color: #B71C1C;
+}
+
+.Calendar {
+    display: grid;
+    grid-template-columns: repeat(9, 8rem);
+    grid-template-rows: 5rem 1rem auto;
+    grid-template-areas:
+    ".      .       month   month   month	month	month	year	."
+    ".      dow     dow     dow     dow     dow     dow     dow     ."
+    ".      line    line    line    line    line    line    line    ."
+    "prev   days    days    days    days    days    days    days    next";
+    justify-content: center;
+    justify-items: center;
+}
+
+.calendar-body {
+    grid-area: days;
+}
