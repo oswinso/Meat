@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const useAsyncEndpoint = fn => {
@@ -8,7 +8,7 @@ const useAsyncEndpoint = fn => {
     pending: false,
     error: false
   })
-  const [req, setReq] = useState({})
+  const [req, setReq] = useState(null)
 
   useEffect(() => {
     if (!req) return
@@ -20,7 +20,6 @@ const useAsyncEndpoint = fn => {
       complete: false
     })
 
-    console.log("Making request: ", req)
     axios(req)
       .then(res => {
         setRes({

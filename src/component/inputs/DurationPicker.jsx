@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 import './inputs.css'
 import TimePicker from 'component/inputs/TimePicker'

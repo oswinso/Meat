@@ -5,15 +5,11 @@ import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 
 import './Calendar.css'
 
-import { MeetingDetailsStore } from 'component/MeetingDetailsStore'
-
 import DaysOfWeek from 'component/calendar/DaysOfWeek'
 import CalendarDay from 'component/calendar/CalendarDay'
 import PlaceholderCalendarDay from 'component/calendar/PlaceholderCalendarDay'
 
-const Calendar = () => {
-  const {days, addDay, removeDay} = MeetingDetailsStore.useContainer()
-
+const Calendar = ({days, addDay, removeDay}) => {
   const [month, setMonth] = useState(moment())
 
   const firstDayOfMonth = () => {

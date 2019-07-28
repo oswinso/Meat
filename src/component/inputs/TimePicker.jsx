@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Dropdown, DropdownMenu, DropdownToggle} from 'reactstrap'
 
 import TextInput from 'component/inputs/TextInput'

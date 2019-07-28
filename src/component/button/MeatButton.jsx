@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Redirect } from 'react-router-dom'
 
-import 'component/MeatButton.css'
+import 'component/button/MeatButton.css'
 
 const MeatButton = (props) => {
   const { to, enabled } = props

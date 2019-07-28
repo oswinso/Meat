@@ -1,5 +1,4 @@
 import React, {useState, useEffect, useRef} from 'react'
-import moment from 'moment'
 
 import './inputs.css'
 import TextInput from 'component/inputs/TextInput'

@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import { createContainer } from 'unstated-next'
-import useMeetingEndpoint from 'component/api/CreateMeeting'
+import useMeetingEndpoint from 'component/api/MeetingEndpoint'
 
 export const useMeetingDetails = () => {
   const [days, setDays] = useState(new Set())
   const [details, setDetails] = useState({ name: '', description: '' })
   const [startTime, setStartTime] = useState("00:00")
   const [endTime, setEndTime] = useState("00:00")
-  const [meeting, postMeeting] = useMeetingEndpoint()
+  const {newMeeting, postMeeting, meeting, getMeeting} = useMeetingEndpoint()
 
   const addDay = day => {
     let newDays = new Set(days)
@@ -37,14 +37,14 @@ export const useMeetingDetails = () => {
 
   const postNewMeeting = () => {
     postMeeting({
-      days: Array.from(days),
+      dates: Array.from(days),
       details,
       startTime,
       endTime
     })
   }
 
-  return { days, name, description, details, startTime, endTime, addDay, removeDay, setDetails, setName, setDescription, setStartTime, setEndTime, meeting, postNewMeeting}
+  return { days, name, description, details, startTime, endTime, addDay, removeDay, setDetails, setName, setDescription, setStartTime, setEndTime, newMeeting, postNewMeeting, meeting, getMeeting}
 }
 
 export const MeetingDetailsStore = createContainer(useMeetingDetails)
